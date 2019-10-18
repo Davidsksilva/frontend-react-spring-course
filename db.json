@@ -26,5 +26,25 @@
       "id": 1
     }
   ],
-  "matriculas": []
+  "matriculas": [
+    {
+      "codigoDisciplina": 323123,
+      "matriculaAluno": 11501945,
+      "matriculas": [],
+      "id": 1
+    },
+    {
+      "codigoDisciplina": 323123,
+      "matriculaAluno": 11502045,
+      "matriculas": [
+        {
+          "codigoDisciplina": 323123,
+          "matriculaAluno": 11501945,
+          "matriculas": [],
+          "id": 1
+        }
+      ],
+      "id": 2
+    }
+  ]
 }

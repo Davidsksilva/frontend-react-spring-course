@@ -41,18 +41,24 @@ export default class DetalhesDisciplina extends Component {
   ];
 
   fetchAlunos = async () => {
-    const response = api.get("/matriculas");
+    let response = await api.get("/matriculas");
 
     const matriculas = response.data;
+    const { codigo } = this.state;
 
-    if (matriculas) {
-      const { codigo } = this.state;
-      const alunos = matriculas.filter(m => m.codigoDisciplina === codigo);
+    const matriculasFiltradas = matriculas.filter(
+      m => m.codigoDisciplina === codigo
+    );
 
-      this.setState({
-        alunos
-      });
-    }
+    const matriculasAlunos = matriculasFiltradas.map(m => m.matriculaAluno);
+
+    response = await api.get("/alunos");
+
+    let alunos = response.data;
+
+    alunos = alunos.filter(a => matriculasAlunos.includes(a.matricula));
+
+    this.setState({ alunos });
   };
 
   async componentDidMount() {
@@ -65,6 +71,8 @@ export default class DetalhesDisciplina extends Component {
       this.setState({
         ...disciplina
       });
+
+      this.fetchAlunos();
     }
   }
 
