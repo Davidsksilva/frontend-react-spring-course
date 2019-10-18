@@ -1,0 +1,22 @@
+{
+  "alunos": [
+    {
+      "nome": "David Simon",
+      "idade": 22,
+      "matricula": 11501945,
+      "email": "davidsimonkastle@gmail.com",
+      "curso": "Engenharia de Computação",
+      "id": 1
+    },
+    {
+      "nome": "Thiago Wesley",
+      "idade": 25,
+      "matricula": 11502045,
+      "email": "thiago@gmail.com",
+      "curso": "Engenharia de Computação",
+      "id": 2
+    }
+  ],
+  "disciplinas": [],
+  "matriculas": []
+}

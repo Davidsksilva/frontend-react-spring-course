@@ -21,15 +21,12 @@ class LayoutTemplate extends React.Component {
   };
 
   handleItemClick = item => {
-    console.log(item);
     this.setState({
       selectedKey: item.key
     });
   };
 
   render() {
-    console.log(this.props);
-
     return (
       <Layout style={{ height: "100%" }}>
         <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
