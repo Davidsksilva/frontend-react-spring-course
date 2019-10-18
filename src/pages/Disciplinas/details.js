@@ -96,6 +96,7 @@ export default class DetalhesDisciplina extends Component {
             dataSource={alunos}
             columns={this.columns}
             style={{ marginTop: 24 }}
+            rowKey="id"
           />
 
           <Row style={{ marginTop: 24 }} type="flex" justify="end" gutter={16}>

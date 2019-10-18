@@ -102,6 +102,7 @@ export default class Matricula extends React.Component {
         <Table
           dataSource={matriculas}
           columns={this.columns}
+          rowKey="id"
           style={{ marginTop: 24 }}
         />
       </div>
