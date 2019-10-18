@@ -25,6 +25,12 @@ export default class Matricula extends React.Component {
     await this.fetchMatriculas();
   };
 
+  checkDisabled = () => {
+    const { codigoDisciplina, matriculaAluno } = this.state;
+
+    return !codigoDisciplina || !matriculaAluno;
+  };
+
   columns = [
     {
       title: "Código Disciplina",
@@ -94,8 +100,12 @@ export default class Matricula extends React.Component {
             />
           </Col>
           <Col span={4} style={{ alignItems: "flex-end", display: "flex" }}>
-            <Button type="primary" onClick={() => this.handleConfirm()}>
-              Confirmar
+            <Button
+              type="primary"
+              disabled={this.checkDisabled()}
+              onClick={() => this.handleConfirm()}
+            >
+              Matricular
             </Button>
           </Col>
         </Row>
