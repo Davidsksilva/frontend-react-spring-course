@@ -17,6 +17,14 @@
       "id": 2
     }
   ],
-  "disciplinas": [],
+  "disciplinas": [
+    {
+      "nome": "Linguagem de Programação IV",
+      "qtdevagas": 100,
+      "codigo": 323123,
+      "professor": "David Simon",
+      "id": 1
+    }
+  ],
   "matriculas": []
 }

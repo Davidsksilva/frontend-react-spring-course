@@ -56,6 +56,7 @@ class Alunos extends React.Component {
     {
       title: "",
       key: "buttons",
+      width: 150,
       render: (text, record) => {
         return (
           <Row>
@@ -67,8 +68,8 @@ class Alunos extends React.Component {
                 <Icon type="delete" />
               </Button>
             </Col>
-            <Col>
-              <Link to={`/alunos/editar/${record.id}`}>
+            <Col span={12}>
+              <Link to={`/alunos/${record.id}/editar/`}>
                 <Button type="primary">
                   <Icon type="edit" />
                 </Button>

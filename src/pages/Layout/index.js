@@ -11,7 +11,7 @@ const { Header, Sider } = Layout;
 class LayoutTemplate extends React.Component {
   state = {
     collapsed: false,
-    selectedKey: "Alunos"
+    selectedKey: ""
   };
 
   toggle = () => {
@@ -34,7 +34,6 @@ class LayoutTemplate extends React.Component {
           <Menu
             theme="dark"
             mode="inline"
-            defaultSelectedKeys={["Alunos"]}
             onClick={item => this.handleItemClick(item)}
           >
             <Menu.Item key="Alunos">

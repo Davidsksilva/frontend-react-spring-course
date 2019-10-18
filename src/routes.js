@@ -6,6 +6,8 @@ import Alunos from "./pages/Alunos";
 import FormAluno from "./pages/Alunos/form";
 
 import Disciplinas from "./pages/Disciplinas";
+import FormDisciplina from "./pages/Disciplinas/form";
+import DetalhesDisciplina from "./pages/Disciplinas/details";
 import Matricula from "./pages/Matricula";
 
 const Routes = () => (
@@ -14,9 +16,22 @@ const Routes = () => (
       <Switch>
         <Route path="/alunos" exact component={Alunos} />
         <Route path="/alunos/novo" exact component={FormAluno} />
-        <Route path="/alunos/editar/:id" exact component={FormAluno} />
+        <Route path="/alunos/:id/editar/" exact component={FormAluno} />
 
         <Route path="/disciplinas" exact component={Disciplinas} />
+        <Route path="/disciplinas/novo" exact component={FormDisciplina} />
+
+        <Route
+          path="/disciplinas/:id/editar/"
+          exact
+          component={FormDisciplina}
+        />
+
+        <Route
+          path="/disciplinas/:id/detalhes"
+          exact
+          component={DetalhesDisciplina}
+        />
 
         <Route path="/matricula" exact component={Matricula} />
       </Switch>
