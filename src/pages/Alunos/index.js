@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Table, Row, Button, Icon } from "antd";
+import { Table, Row, Col, Button, Icon } from "antd";
 import { Link } from "react-router-dom";
 
 import api from "../../services/api";
@@ -58,9 +58,23 @@ class Alunos extends React.Component {
       key: "buttons",
       render: (text, record) => {
         return (
-          <Button type="danger" onClick={() => this.handleDelete(record.id)}>
-            <Icon type="delete" />
-          </Button>
+          <Row>
+            <Col span={12}>
+              <Button
+                type="danger"
+                onClick={() => this.handleDelete(record.id)}
+              >
+                <Icon type="delete" />
+              </Button>
+            </Col>
+            <Col>
+              <Link to={`/alunos/editar/${record.id}`}>
+                <Button type="primary">
+                  <Icon type="edit" />
+                </Button>
+              </Link>
+            </Col>
+          </Row>
         );
       }
     }
